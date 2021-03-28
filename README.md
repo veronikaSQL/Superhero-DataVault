@@ -1,1 +1,16 @@
 # Superhero-DataVault
+
+Sources:
+https://www.superherodb.com/
+https://github.com/algolia/marvel-search
+
+Sample code is written for Snowflake but can be easily adjusted for other databases
+1. To create a database, schemas, and tables execute 1_CreateObjects.sql
+2. Load data using your favorite import tool. I used "Load Table" functionality in Snowflake's GUI
+    load Data/superherodb/superhero_raw.csv to  SUPERHERO.DEMO.SUPERHEROES_RAW
+    load Data/marvel_search/*.* to SUPERHERO.DEMO.SUPERHEROES_MARVEL_SEARCH
+3. Populate Data Vault tables by executing files in DATA_VAULT/Tables/* in any order
+4. Create effectivity Satellite views by executing scrpts in DATA_VAULT/Views/*
+5. Create Information Mart views by executing Mart/Views/*
+6. Demo queires can be found in DemoQueries.sql
+
