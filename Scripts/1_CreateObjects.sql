@@ -4,8 +4,11 @@ create or replace schema SUPERHERO.DEMO;
 
 create or replace schema SUPERHERO.DATA_VAULT;
 
+create or replace schema SUPERHERO.MART;
+
+
 create or replace TABLE SUPERHERO.DEMO.SUPERHEROES_MARVEL_SEARCH (
-	JSON_RAW VARIANT
+	JSON_RAW VARIANT);
 
 create or replace TABLE SUPERHERO.DEMO.SUPERHEROES_RAW (
 	NAME VARCHAR(16777216),
