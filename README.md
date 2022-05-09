@@ -3,11 +3,11 @@
 Sources:
 
 https://www.superherodb.com​
-
 https://github.com/algolia/marvel-search​
-
 https://www.kaggle.com/jonathanbesomi/superheroes-nlp-dataset
+https://www.kaggle.com/claudiodavi/superhero-set
 
+Original Version create for WWDVC21
 Sample code is written for Snowflake but can be easily adjusted for other databases
 1. To create a database, schemas, and tables execute 1_CreateObjects.sql
 2. Load data using your favorite import tool. I used "Load Table" functionality in Snowflake's GUI
@@ -25,3 +25,5 @@ Sample code is written for Snowflake but can be easily adjusted for other databa
 9. create new Sat data_vault/tables/SAT_being kaggle_nlp.sql
 10. create new effectivity SAT data_vault/views/sat_being_kaggle_nlp.sql
 11. modify  beings_all view to add new source to by executing mart/views/beings_all_2.sql 
+
+Version that includes data classification and handling of PII
