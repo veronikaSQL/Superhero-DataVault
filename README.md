@@ -26,4 +26,6 @@ Sample code is written for Snowflake but can be easily adjusted for other databa
 10. create new effectivity SAT data_vault/views/sat_being_kaggle_nlp.sql
 11. modify  beings_all view to add new source to by executing mart/views/beings_all_2.sql 
 
-Version that includes data classification and handling of PII
+PII, Data Clssification, Data Masking WWDVC 2022
+Scripts_PII
+
