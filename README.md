@@ -3,7 +3,7 @@
 Sources:
 
 https://www.superherodb.com​
-https://github.com/algolia/marvel-search​
+https://github.com/algolia/marvel-search
 https://www.kaggle.com/jonathanbesomi/superheroes-nlp-dataset
 https://www.kaggle.com/claudiodavi/superhero-set
 
