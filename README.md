@@ -2,9 +2,12 @@
 
 Sources:
 
-https://www.superherodb.com​
+https://www.superherodb.com
+
 https://github.com/algolia/marvel-search
+
 https://www.kaggle.com/jonathanbesomi/superheroes-nlp-dataset
+
 https://www.kaggle.com/claudiodavi/superhero-set
 
 Original Version create for WWDVC21
@@ -28,4 +31,6 @@ Sample code is written for Snowflake but can be easily adjusted for other databa
 
 PII, Data Clssification, Data Masking WWDVC 2022
 Scripts_PII
-
+1. Create objects by executing 1_create_db_schema_raw_tables.sql
+2. Load data located under /data folder. You can use any method of your choice such as SnowSQL, classic UI etc
+3. Execute the rest of the scripts 2-9
