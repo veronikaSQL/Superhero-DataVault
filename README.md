@@ -34,3 +34,5 @@ Scripts_PII
 1. Create objects by executing 1_create_db_schema_raw_tables.sql
 2. Load data located under /data folder. You can use any method of your choice such as SnowSQL, classic UI etc
 3. Execute the rest of the scripts 2-9
+
+Scripts folder -- Created for Data Vault UK presentation "What to do (or not do) when implementing a Data Vault - lessons from the field "
