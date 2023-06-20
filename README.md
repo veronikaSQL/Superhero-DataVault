@@ -29,10 +29,6 @@ Sample code is written for Snowflake but can be easily adjusted for other databa
 10. create new effectivity SAT data_vault/views/sat_being_kaggle_nlp.sql
 11. modify  beings_all view to add new source to by executing mart/views/beings_all_2.sql 
 
-PII, Data Clssification, Data Masking WWDVC 2022
-Scripts_PII
-1. Create objects by executing 1_create_db_schema_raw_tables.sql
-2. Load data located under /data folder. You can use any method of your choice such as SnowSQL, classic UI etc
-3. Execute the rest of the scripts 2-9
-
-Scripts folder -- Created for Data Vault UK presentation "What to do (or not do) when implementing a Data Vault - lessons from the field "
+Snowflake_summit_2023 folder
+This demo shows Snowflake data classification, tags, masking, separation of PII data from non-PII by using a different data vault satelite. 
+Execute files in the order from 1-13. 
