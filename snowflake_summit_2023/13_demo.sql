@@ -4,7 +4,7 @@ use warehouse ad_hoc_wh;
 select name, *
 from mart.superhero.super_beings;
 
-use role analyst_pii;
+use role analyst_bii;
 
 select name, *
 from mart.superhero.super_beings;
@@ -13,6 +13,7 @@ from mart.superhero.super_beings;
 select name, hub_being_key,*
 from mart.superhero.super_beings
 where name ilike 'godzilla';
+--275c242790b275b07ec6889e789f2ca3
 
 use role sysadmin;
 
@@ -22,21 +23,23 @@ where name ilike 'godzilla';
 
 -- remove name
 update data_vault.superhero.sat_being_superhero_set_bii
-set name = 'GDPR'
+set name = 'CCPA'
 where name ilike 'godzilla';
 
 -- the name is no longer there but all the other data is still there
 select *
 from  mart.superhero.super_beings
+--where name ilike 'godzilla';
 where hub_being_key = '275c242790b275b07ec6889e789f2ca3';
 
 -- SUMMARY
 use role data_classification;
+use warehouse data_governance_wh;
 
 -- clasified data
 SELECT * FROM RAW.ADMIN.DATA_CLASSIFICATION;
 
--- CREATED PII TAG
+-- CREATED BII TAG. data delay
 SELECT * FROM SNOWFLAKE.ACCOUNT_USAGE.TAGS;
 SELECT * FROM SNOWFLAKE.ACCOUNT_USAGE.TAG_REFERENCES;
 
@@ -59,4 +62,3 @@ SHOW TAGS IN SCHEMA RAW.ADMIN;
 --     apply tags to columns
 --     load parsed JSON into DV or parse out PII into columns and replace them with masked values inside JSON????
 --     PII data cannot be used for business keys. Hash is deterministic (MD(5) of "Veronika" is always f481b55e4aa9188bb83cc1c786333417). Need to generate sequence to be used as a business key. 
-
