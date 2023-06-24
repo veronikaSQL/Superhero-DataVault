@@ -618,18 +618,21 @@ where hub_being_key = '535ab557c0683b926d99c02219264528';
 
 use role data_classification;
 -- assign custom tag to columns.
-alter table DATA_VAULT.SUPERHERO.SAT_BEING_SUPERHERO_SET_BII modify column NAME set tag raw.admin.pii_string='NAME';
+alter table DATA_VAULT.SUPERHERO.SAT_BEING_SUPERHERO_SET_BII 
+modify column NAME 
+set tag raw.admin.Bii_string='NAME';
 
-use role sysadmin;
-SELECT * 
-FROM DATA_VAULT.SUPERHERO.HUB_BEING
-where hub_being_key = '535ab557c0683b926d99c02219264528';
+-- use role sysadmin;
 
-SELECT *
-FROM DATA_VAULT.SUPERHERO.SAT_BEING_SUPERHERO_SET
-where  hub_being_key = '535ab557c0683b926d99c02219264528';
+-- SELECT * 
+-- FROM DATA_VAULT.SUPERHERO.HUB_BEING
+-- where hub_being_key = '535ab557c0683b926d99c02219264528';
+
+-- SELECT *
+-- FROM DATA_VAULT.SUPERHERO.SAT_BEING_SUPERHERO_SET
+-- where  hub_being_key = '535ab557c0683b926d99c02219264528';
 
 
-SELECT Name,*
-FROM DATA_VAULT.SUPERHERO.SAT_BEING_SUPERHERO_SET_BII
-where hub_being_key = '535ab557c0683b926d99c02219264528';
+-- SELECT Name,*
+-- FROM DATA_VAULT.SUPERHERO.SAT_BEING_SUPERHERO_SET_BII
+-- where hub_being_key = '535ab557c0683b926d99c02219264528';
