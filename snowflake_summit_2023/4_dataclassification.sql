@@ -49,6 +49,9 @@ select system$get_tag_allowed_values('snowflake.core.privacy_category');
 select system$get_tag_allowed_values('snowflake.core.semantic_category');
 
 -- function EXTRACT_SEMANTIC_CATEGORIES( '<object_name>' [ , <max_rows_to_scan> ] ) max_rows_to_scan 0-10000 (10000 - default)
+
+select * from HEROES_INFORMATION;
+
 SELECT
     f.key::varchar as column_name,
     f.value:"privacy_category"::varchar as privacy_category,  
@@ -104,10 +107,7 @@ select extract_semantic_categories('"RAW"."SUPERHERO"."SUPERHERO_POWERS"');
 insert into admin.data_classification 
 select 'raw.SUPERHERO.SUPERHERO_POWERS' as table_name, * from table (result_scan(last_query_id())); 
 
--- we created an materialized view to run data classification on a JSON
-select extract_semantic_categories('"RAW"."SUPERHERO"."MV_SUPERHEROES_MARVEL_SEARCH"'); 
-insert into admin.data_classification 
-select 'raw.SUPERHERO.MV_SUPERHEROES_MARVEL_SEARCH' as table_name, * from table (result_scan(last_query_id())); 
+
 
 -- here is what we logged
 select *
@@ -154,4 +154,3 @@ where
 (clsf.value:semantic_category::string ilike 'NAME'
 or alt.value:semantic_category::string ilike 'NAME')
 ;
-
