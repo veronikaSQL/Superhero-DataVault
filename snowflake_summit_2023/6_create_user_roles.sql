@@ -10,15 +10,14 @@ grant usage, monitor on schema raw.superhero to role analyst;
 grant select on all tables in schema raw.superhero to role analyst;
 
 -- read for pii data
-create or replace role analyst_pii;
+create or replace role analyst_bii;
 
-grant role analyst to role analyst_pii;
+grant role analyst to role analyst_bii;
 
 
 -- don't like orphan roles
-grant role analyst_pii to role sysadmin; 
+grant role analyst_bii to role sysadmin; 
 
 
 --- LETS LOOK AT THE ROLES HIERARCHY IN SNOWSIGHT
-
 
