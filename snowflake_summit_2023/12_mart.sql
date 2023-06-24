@@ -196,4 +196,6 @@ use role sysadmin;
 -- add pii tag to the view
 use role data_classification;
 
-alter table mart.superhero.super_beings modify column name set tag raw.admin.pii_string='NAME';
+alter table mart.superhero.super_beings
+modify column name 
+set tag raw.admin.bii_name='NAME';
