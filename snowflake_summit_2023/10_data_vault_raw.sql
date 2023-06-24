@@ -223,13 +223,15 @@ create or replace TABLE DATA_VAULT.SUPERHERO.SAT_BEING_SUPERHERO_SET (
 	LOAD_DATE TIMESTAMP_TZ(9)
 );
 
-create or replace TABLE DATA_VAULT.SUPERHERO.SML_BEING (
-	HUB_BEING_KEY_1 VARCHAR(32),
-	HUB_BEING_KEY_2 VARCHAR(32),
-	LOAD_DATE TIMESTAMP_TZ(9)
-);
+-- create or replace TABLE DATA_VAULT.SUPERHERO.SML_BEING (
+-- 	HUB_BEING_KEY_1 VARCHAR(32),
+-- 	HUB_BEING_KEY_2 VARCHAR(32),
+-- 	LOAD_DATE TIMESTAMP_TZ(9)
+-- );
 
- 
+--- LETS CHECK ERD
+
+
 -- permissions for analyst
 use role accountadmin;
 grant usage, monitor on database MART to role analyst;  
