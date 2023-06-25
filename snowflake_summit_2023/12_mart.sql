@@ -198,4 +198,4 @@ use role data_classification;
 
 alter table mart.superhero.super_beings
 modify column name 
-set tag raw.admin.bii_name='NAME';
+set tag raw.admin.bii_string='NAME';
