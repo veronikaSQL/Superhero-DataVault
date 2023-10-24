@@ -46,7 +46,6 @@ use warehouse data_governance_wh;
 
 -- data classification
 select system$get_tag_allowed_values('snowflake.core.privacy_category');
-select system$get_tag_allowed_values('snowflake.core.semantic_category');
 
 -- function EXTRACT_SEMANTIC_CATEGORIES( '<object_name>' [ , <max_rows_to_scan> ] ) max_rows_to_scan 0-10000 (10000 - default)
 
